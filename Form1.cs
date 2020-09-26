@@ -160,7 +160,7 @@ namespace Bloc_De_Notas
 
         private void nUEVOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            
         }
     }
 }
