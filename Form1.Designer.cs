@@ -34,6 +34,7 @@
             this.aBRIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gUARDARToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gUARDARCOMOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nUEVOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gUARDARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cOPIARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,6 @@
             this.pEGARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bUSQUEDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.nUEVOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +68,7 @@
             this.aRCHIVOToolStripMenuItem.Name = "aRCHIVOToolStripMenuItem";
             this.aRCHIVOToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.aRCHIVOToolStripMenuItem.Text = "ARCHIVO";
+            this.aRCHIVOToolStripMenuItem.Click += new System.EventHandler(this.aRCHIVOToolStripMenuItem_Click);
             // 
             // aBRIRToolStripMenuItem
             // 
@@ -90,6 +91,13 @@
             this.gUARDARCOMOToolStripMenuItem.Text = "GUARDAR COMO";
             this.gUARDARCOMOToolStripMenuItem.Click += new System.EventHandler(this.gUARDARCOMOToolStripMenuItem_Click);
             // 
+            // nUEVOToolStripMenuItem
+            // 
+            this.nUEVOToolStripMenuItem.Name = "nUEVOToolStripMenuItem";
+            this.nUEVOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nUEVOToolStripMenuItem.Text = "NUEVO";
+            this.nUEVOToolStripMenuItem.Click += new System.EventHandler(this.nUEVOToolStripMenuItem_Click);
+            // 
             // sALIRToolStripMenuItem
             // 
             this.sALIRToolStripMenuItem.Name = "sALIRToolStripMenuItem";
@@ -110,21 +118,21 @@
             // cOPIARToolStripMenuItem
             // 
             this.cOPIARToolStripMenuItem.Name = "cOPIARToolStripMenuItem";
-            this.cOPIARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cOPIARToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.cOPIARToolStripMenuItem.Text = "COPIAR";
             this.cOPIARToolStripMenuItem.Click += new System.EventHandler(this.cOPIARToolStripMenuItem_Click);
             // 
             // cORTARToolStripMenuItem
             // 
             this.cORTARToolStripMenuItem.Name = "cORTARToolStripMenuItem";
-            this.cORTARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cORTARToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.cORTARToolStripMenuItem.Text = "CORTAR";
             this.cORTARToolStripMenuItem.Click += new System.EventHandler(this.cORTARToolStripMenuItem_Click);
             // 
             // pEGARToolStripMenuItem
             // 
             this.pEGARToolStripMenuItem.Name = "pEGARToolStripMenuItem";
-            this.pEGARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pEGARToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.pEGARToolStripMenuItem.Text = "PEGAR";
             this.pEGARToolStripMenuItem.Click += new System.EventHandler(this.pEGARToolStripMenuItem_Click);
             // 
@@ -144,13 +152,6 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(670, 346);
             this.textBox1.TabIndex = 1;
-            // 
-            // nUEVOToolStripMenuItem
-            // 
-            this.nUEVOToolStripMenuItem.Name = "nUEVOToolStripMenuItem";
-            this.nUEVOToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nUEVOToolStripMenuItem.Text = "NUEVO";
-            this.nUEVOToolStripMenuItem.Click += new System.EventHandler(this.nUEVOToolStripMenuItem_Click);
             // 
             // Form1
             // 

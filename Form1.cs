@@ -26,28 +26,9 @@ namespace Bloc_De_Notas
 
         private void gUARDARToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            string contenido = textBox1.Text;
-            //si es true es decir que es nuevo
-            if (change == true)
-            {
-                SaveFileDialog dlg = new SaveFileDialog();
-                dlg.Filter = "Archivos de texto|*.txt";
-                DialogResult res = dlg.ShowDialog();
 
+            guardar();
 
-                if (res == DialogResult.OK)
-                    File.WriteAllText(dlg.FileName, contenido);
-                name = dlg.FileName;
-                change = false;
-            }
-            //si no solo guarda y sobrescribe
-            else {
-                File.WriteAllText(name,contenido);
-                memo = textBox1.Text;
-                change = false;
-            }
-            
-            
         }
 
         private void aBRIRToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,6 +66,33 @@ namespace Bloc_De_Notas
 
             memo = textBox1.Text;
             
+        }
+
+        private void guardar()
+        {
+            string contenido = textBox1.Text;
+            //si es true es decir que es nuevo
+            if (change == true)
+            {
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.Filter = "Archivos de texto|*.txt";
+                DialogResult res = dlg.ShowDialog();
+
+
+                if (res == DialogResult.OK)
+                    File.WriteAllText(dlg.FileName, contenido);
+                name = dlg.FileName;
+                change = false;
+            }
+            //si no solo guarda y sobrescribe
+            else
+            {
+                File.WriteAllText(name, contenido);
+                memo = textBox1.Text;
+                change = false;
+            }
+
+
         }
 
         private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
@@ -160,7 +168,31 @@ namespace Bloc_De_Notas
 
         private void nUEVOToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DialogResult oDlgRes;
             
+            string contenido = textBox1.Text;
+            if (!string.IsNullOrEmpty(textBox1.Text))
+            {
+                oDlgRes = MessageBox.Show("¿Desea guardar el archivo", "BLOCK DE NOTAS",MessageBoxButtons.OKCancel);
+                if (oDlgRes ==DialogResult.OK)
+                {
+                    guardar();
+                    change = true;
+                    textBox1.Text = "";
+                }
+                else
+                {
+                    textBox1.Text = "";
+                }
+
+            }
+
+
+        }
+
+        private void aRCHIVOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
